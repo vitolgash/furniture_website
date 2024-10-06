@@ -1,3 +1,7 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Disallow: /private/ # Close access to personal data
+Disallow: /admin/ # Close administrative pages
+Disallow: /cart/ # Close access to the cart
+Disallow: /login/ # Close authorization pages
+Disallow: /user/ # Close user personal accounts
