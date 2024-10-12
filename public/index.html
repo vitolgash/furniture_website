@@ -13,13 +13,199 @@
   <meta name="description" content="Web site created using create-react-app" />
   <link rel="stylesheet" href="%PUBLIC_URL%/index.css" />
   <link rel="stylesheet" href="%PUBLIC_URL%/App.css" />
-  <title>Create React App Sample</title>
+  <style>
+    body {
+      background: url('%PUBLIC_URL%/wood-pattern.jpg') repeat;
+      font-family: Arial, sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #2f4f4f;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #2f4f4f;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #007BFF;
+    }
+
+    .hero-section {
+      background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('%PUBLIC_URL%/hero-furniture.jpg') center/cover no-repeat;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #2f4f4f;
+      padding: 20px;
+    }
+
+    .hero-section h2 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .hero-section p {
+      font-size: 1.5em;
+    }
+
+    /* Стили для галереи изображений */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .gallery-item {
+      background: #fff;
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 220px;
+      text-align: center;
+    }
+
+    .gallery img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-item p {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .price {
+      color: #007BFF;
+      font-size: 1.2em;
+    }
+
+    /* Стили для видео */
+    .videos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    video {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Стили для Vite логотипа */
+    img[alt="Vite Logo"] {
+      display: block;
+      margin: 40px auto;
+      max-width: 150px;
+    }
+  </style>
+  <title>Furniture Store - Beautiful and Affordable Furniture</title>
 </head>
 
 <body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
-  <img src="/vite.svg" alt="Vite Logo" /> <!-- Добавляем Vite.svg -->
+  <header>
+    <h1>Furniture Store</h1>
+  </header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#videos">Videos</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+
+  <section class="hero-section">
+    <h2>Elegant Furniture for Every Home</h2>
+    <p>Discover a wide variety of high-quality furniture that will transform your living space.</p>
+  </section>
+
+  <!-- Добавляем изображения -->
+  <h2 id="gallery">Gallery of Furniture</h2>
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="/images/photo1.png" alt="Photo 1 - Luxury Sofa">
+      <p>Luxury Sofa</p>
+      <p class="price">$499.99</p>
+    </div>
+    <div class="gallery-item">
+      <img src="/images/photo2.png" alt="Photo 2 - Wooden Dining Table">
+      <p>Wooden Dining Table</p>
+      <p class="price">$799.99</p>
+    </div>
+    <div class="gallery-item">
+      <img src="/images/photo3.png" alt="Photo 3 - Modern Armchair">
+      <p>Modern Armchair</p>
+      <p class="price">$299.99</p>
+    </div>
+    <div class="gallery-item">
+      <img src="/images/photo4.png" alt="Photo 4 - Elegant Bed Frame">
+      <p>Elegant Bed Frame</p>
+      <p class="price">$699.99</p>
+    </div>
+    <div class="gallery-item">
+      <img src="/images/photo5.png" alt="Photo 5 - Coffee Table">
+      <p>Coffee Table</p>
+      <p class="price">$149.99</p>
+    </div>
+    <div class="gallery-item">
+      <img src="/images/photo6.png" alt="Photo 6 - Bookshelf">
+      <p>Bookshelf</p>
+      <p class="price">$249.99</p>
+    </div>
+    <!-- Добавьте дополнительные элементы галереи по мере необходимости -->
+  </div>
+
+  <!-- Добавляем видео -->
+  <h2 id="videos">Furniture Videos</h2>
+  <div class="videos">
+    <video controls>
+      <source src="/videos/optimized_KBe7ZdENCcmjwYsDnBf.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video controls>
+      <source src="/videos/optimized_BOnV01P6DB6xIiKCxHn.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Добавляем Vite.svg -->
+  <img src="/vite.svg" alt="Vite Logo" />
+
   <script type="module" src="%PUBLIC_URL%/main.jsx"></script> <!-- Подключаем main.jsx -->
 </body>
 
