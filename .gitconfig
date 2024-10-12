@@ -1,0 +1,7 @@
+[alias]
+    co = git checkout
+    cm = git commit
+    br = git branch
+    st = git status
+    ps = git push
+    pl = git pull
